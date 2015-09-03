@@ -1,13 +1,9 @@
-FROM gliderlabs/alpine:3.1
+FROM alpine:3.1
 
 MAINTAINER Jakub Igla <jakub.igla@gmail.com>
 
-RUN mkdir -p /www && \
-    mkdir -p /etc/apache2/sites-enabled && \
-    mkdir -p /var/log
+RUN mkdir -p /var/www/html
 
-VOLUME /www
-VOLUME /etc/apache2/sites-enabled
-VOLUME /var/log
+VOLUME /var/www/html
 
 ENTRYPOINT ["true"]
